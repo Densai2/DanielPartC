@@ -15,6 +15,7 @@ namespace WindowsFormsPartC.Unit7
 
         private bool keyPressed = false;
         private string keyName;
+        DialogResult response;
 
         public SketchForm()
         {
@@ -46,6 +47,24 @@ namespace WindowsFormsPartC.Unit7
             else if (keyName == "Down")
             {
                 y = y + penSize / 2;
+            }
+            else if (keyName == "C")
+            {
+            }
+            else if (keyName == "Escape")
+            {
+                response = MessageBox.Show("Do you want to quit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (response == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+
+            }
+            else if(keyName == "F1")
+            {
+                Random rnd = new Random();
+                Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                
             }
 
             if (keyPressed)

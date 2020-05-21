@@ -14,8 +14,8 @@ namespace WindowsFormsPartC.Unit6
     {
         public const int BYTE = 256;
 
-        private int x; 
-        private int y;
+        private int x; // x axis
+        private int y; // y axis
         private int w; // width
         private int h; // height
 
@@ -130,7 +130,7 @@ namespace WindowsFormsPartC.Unit6
             graphics.FillPolygon(Brushes.Green, hexagon);
 
             Font myFont = new Font("Courier", 30);
-            graphics.DrawString("Derek's Hexagon", myFont, Brushes.Red, x, y + 2 * size - 50);
+            graphics.DrawString("Daniel's Hexagon", myFont, Brushes.Red, x, y + 2 * size - 50);
 
         }
 
@@ -175,7 +175,7 @@ namespace WindowsFormsPartC.Unit6
             for (int i = 1; i <= 6; i++)
             {
                 g.Clear(BackColor);
-                g.DrawString("Derek's Graphics Drawing", myFont, Brushes.Red, x, y);
+                g.DrawString("Daniel's Graphics Drawing", myFont, Brushes.Red, x, y);
 
                 //System.Threading.Thread.Sleep(200);
                 y = y + fontSize;

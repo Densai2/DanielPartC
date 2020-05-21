@@ -1,9 +1,11 @@
-﻿using System;
+﻿using DerekWindowsFormsPartC;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsPartC.Unit5;
+using WindowsFormsPartC.Unit6;
 using WindowsFormsPartC.Unit7;
 
 namespace WindowsFormsPartC

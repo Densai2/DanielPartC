@@ -35,6 +35,7 @@
             this.flyMeRadioButton = new System.Windows.Forms.RadioButton();
             this.quitButton = new System.Windows.Forms.Button();
             this.graphicsRadioButton = new System.Windows.Forms.RadioButton();
+            this.unit6RadioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,20 +93,30 @@
             // 
             this.graphicsRadioButton.AutoSize = true;
             this.graphicsRadioButton.Checked = true;
-            this.graphicsRadioButton.Location = new System.Drawing.Point(48, 155);
+            this.graphicsRadioButton.Location = new System.Drawing.Point(48, 200);
             this.graphicsRadioButton.Name = "graphicsRadioButton";
             this.graphicsRadioButton.Size = new System.Drawing.Size(180, 30);
             this.graphicsRadioButton.TabIndex = 5;
             this.graphicsRadioButton.TabStop = true;
             this.graphicsRadioButton.Text = "Unit 6 Graphics";
             this.graphicsRadioButton.UseVisualStyleBackColor = true;
-            this.graphicsRadioButton.CheckedChanged += new System.EventHandler(this.graphicsRadioButton_CheckedChanged);
+            // 
+            // unit6RadioButton
+            // 
+            this.unit6RadioButton.AutoSize = true;
+            this.unit6RadioButton.Location = new System.Drawing.Point(48, 153);
+            this.unit6RadioButton.Name = "unit6RadioButton";
+            this.unit6RadioButton.Size = new System.Drawing.Size(166, 30);
+            this.unit6RadioButton.TabIndex = 6;
+            this.unit6RadioButton.Text = "Unit 6: 6.1-6.5";
+            this.unit6RadioButton.UseVisualStyleBackColor = true;
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 679);
+            this.Controls.Add(this.unit6RadioButton);
             this.Controls.Add(this.graphicsRadioButton);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.flyMeRadioButton);
@@ -130,5 +141,6 @@
         private System.Windows.Forms.RadioButton flyMeRadioButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.RadioButton graphicsRadioButton;
+        private System.Windows.Forms.RadioButton unit6RadioButton;
     }
 }

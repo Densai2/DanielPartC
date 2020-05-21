@@ -27,6 +27,8 @@ namespace WindowsFormsPartC.Unit5
 
         private Animation animation = new Animation(4);
 
+        private Animation animation2 = new Animation(4);
+
         public FlyMeForm()
         {
             InitializeComponent();
@@ -37,9 +39,10 @@ namespace WindowsFormsPartC.Unit5
             Close();
         }
 
+
         private void startStopAnimation(object sender, EventArgs e)
         {
-            if(stopRadioButton.Checked)
+            if (stopRadioButton.Checked)
             {
                 animationTimer.Enabled = false;
             }
@@ -77,8 +80,38 @@ namespace WindowsFormsPartC.Unit5
                 BackgroundImage = bitmap;
             }
 
+
+
         }
 
+        private void updatePigs(object sender, EventArgs e)
+        {
+            pigPictureBox.Image = animation.GetNextImage();
+
+            pigPictureBox.Left += horizontalSpeed;
+
+            // If the pig goes off the right hand side
+
+            if (pigPictureBox.Left > this.Width)
+            {
+                pigPictureBox.Top += VERTICAL_SPEED;
+                pigPictureBox.Left = -pigPictureBox.Width;
+
+                //Image image = Image.FromFile("../../Images/Town and Sky/City1.wmf");
+
+                if (background == BACKGROUND_IMAGE_1)
+                {
+                    background = BACKGROUND_IMAGE_2;
+                }
+                else
+                {
+                    background = BACKGROUND_IMAGE_1;
+                }
+
+                Bitmap bitmap = new Bitmap(background);
+                BackgroundImage = bitmap;
+            }
+        }
         private void changeSpeed(object sender, EventArgs e)
         {
             int speed = (int)speedNumericUpDown.Value;
@@ -100,5 +133,12 @@ namespace WindowsFormsPartC.Unit5
             string baseFileName = "../../Images/Copter/copter";
             animation.LoadImages(baseFileName);
         }
+
+        private void loadImages2(object sender, EventArgs e)
+        {
+            string baseFileName = "../../Images/Pigs/Pig";
+            animation.LoadImages(baseFileName);
+        }
+
     }
-}
+} 

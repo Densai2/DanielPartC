@@ -21,7 +21,7 @@ namespace WindowsFormsPartC.Unit6
     /// including rectangles, ellipses, polygons and lines.
     /// 
     /// Unit 6: Tasks 6.1 to 6.5
-    /// Derek Peacock
+    /// Daniel Grace
     /// </summary>
     public partial class GraphicsForm : Form
     {
@@ -145,10 +145,11 @@ namespace WindowsFormsPartC.Unit6
             for(int i = 1; i <= 6; i++)
             {
                 g.Clear(BackColor);
-                g.DrawString("Derek's Graphics Drawing", myFont, Brushes.Red, x, y);
+                g.DrawString("Daniel's Graphics Drawing", myFont, Brushes.Red, x, y);
 
-                System.Threading.Thread.Sleep(200);
+                System.Threading.Thread.Sleep(500);
                 y = y + fontSize;
+                g.Clear(BackColor);
             }
         }
 
@@ -198,7 +199,7 @@ namespace WindowsFormsPartC.Unit6
             g.FillPolygon(Brushes.Yellow, hexagon);
 
             Font myFont = new Font("Courier", 30);
-            g.DrawString("Derek's Hexagon", myFont, Brushes.Red, 120, 320);
+            g.DrawString("Daniel's Hexagon", myFont, Brushes.Red, 120, 320);
         }
 
         private void quitForm(object sender, System.EventArgs e)
@@ -256,7 +257,7 @@ namespace WindowsFormsPartC.Unit6
             {
                 shape = Shapes.ELLIPSE;
             }
-            else if (key == "F")
+            else if (key == "M")
             {
                 shape = Shapes.FIGURE;
             }

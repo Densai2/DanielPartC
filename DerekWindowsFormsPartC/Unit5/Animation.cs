@@ -8,7 +8,7 @@ namespace WindowsFormsPartC.Unit5
     /// can be used for all animation using GIF images that are 
     /// numbered 0..maxnImages
     /// 
-    /// Refactored by: Derek Peacock
+    /// Refactored by: Daniel Grace
     /// </summary>
     public class Animation
     {

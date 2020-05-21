@@ -32,13 +32,18 @@
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.animationPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.butterflyRadioButton = new System.Windows.Forms.RadioButton();
             this.horseRadioButton = new System.Windows.Forms.RadioButton();
+            this.butterflyRadioButton = new System.Windows.Forms.RadioButton();
             this.startButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
+            this.dateTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.animationPictureBox)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // animationTimer
@@ -63,6 +68,17 @@
             this.panel1.Size = new System.Drawing.Size(270, 65);
             this.panel1.TabIndex = 1;
             // 
+            // horseRadioButton
+            // 
+            this.horseRadioButton.AutoSize = true;
+            this.horseRadioButton.Location = new System.Drawing.Point(158, 18);
+            this.horseRadioButton.Name = "horseRadioButton";
+            this.horseRadioButton.Size = new System.Drawing.Size(88, 30);
+            this.horseRadioButton.TabIndex = 1;
+            this.horseRadioButton.Text = "Horse";
+            this.horseRadioButton.UseVisualStyleBackColor = true;
+            this.horseRadioButton.CheckedChanged += new System.EventHandler(this.LoadImages);
+            // 
             // butterflyRadioButton
             // 
             this.butterflyRadioButton.AutoSize = true;
@@ -75,17 +91,6 @@
             this.butterflyRadioButton.Text = "Butterfly";
             this.butterflyRadioButton.UseVisualStyleBackColor = true;
             this.butterflyRadioButton.CheckedChanged += new System.EventHandler(this.LoadImages);
-            // 
-            // horseRadioButton
-            // 
-            this.horseRadioButton.AutoSize = true;
-            this.horseRadioButton.Location = new System.Drawing.Point(158, 18);
-            this.horseRadioButton.Name = "horseRadioButton";
-            this.horseRadioButton.Size = new System.Drawing.Size(88, 30);
-            this.horseRadioButton.TabIndex = 1;
-            this.horseRadioButton.Text = "Horse";
-            this.horseRadioButton.UseVisualStyleBackColor = true;
-            this.horseRadioButton.CheckedChanged += new System.EventHandler(this.LoadImages);
             // 
             // startButton
             // 
@@ -117,24 +122,60 @@
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.CloseForm);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.timeLabel);
+            this.panel2.Controls.Add(this.dateLabel);
+            this.panel2.Location = new System.Drawing.Point(773, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 5;
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Location = new System.Drawing.Point(4, 43);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(70, 26);
+            this.timeLabel.TabIndex = 1;
+            this.timeLabel.Text = "label1";
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.Location = new System.Drawing.Point(4, 4);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(70, 26);
+            this.dateLabel.TabIndex = 0;
+            this.dateLabel.Text = "label1";
+            // 
+            // dateTimer
+            // 
+            this.dateTimer.Enabled = true;
+            this.dateTimer.Interval = 1000;
+            this.dateTimer.Tick += new System.EventHandler(this.updateDateTimer);
+            // 
             // AnimationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 599);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.animationPictureBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AnimationForm";
             this.Text = "Derek\'s Animation Form";
             this.Load += new System.EventHandler(this.LoadImages);
             ((System.ComponentModel.ISupportInitialize)(this.animationPictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +191,10 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Button quitButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.Timer dateTimer;
     }
 }
 

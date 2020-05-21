@@ -11,10 +11,12 @@ namespace WindowsFormsPartC.Unit5
     /// a butterfly.
     /// 
     /// Author      : Derek Peacock
-    /// Modified by : Student Name
+    /// Modified by : Daniel Grace
     /// </summary>
     public partial class AnimationForm : Form
     {
+        const int MAX = 4;
+
         private const int MAXN_IMAGES = 8;
 
         private Image[] images = new Image[MAXN_IMAGES];
@@ -22,6 +24,10 @@ namespace WindowsFormsPartC.Unit5
         private int imageNo = 0;
 
         private Random generator = new Random();
+
+        Image[] pics2 = new Image[MAX];
+
+        int count2 = 0;
 
         public AnimationForm()
         {
@@ -36,7 +42,16 @@ namespace WindowsFormsPartC.Unit5
         /// </summary>
         private void LoadImages(object sender, EventArgs e)
         {
-            string baseFileName = "../../Images/Butterflies/bfly"; ;
+            string baseFileName;
+
+            if (horseRadioButton.Checked)
+            {
+                baseFileName = "../../Images/Horses/horsey";
+            }
+            else
+            {
+                baseFileName = "../../Images/Butterflies/bfly"; 
+            }
 
             for (imageNo = 0; imageNo < MAXN_IMAGES; imageNo++)
             {
@@ -55,11 +70,11 @@ namespace WindowsFormsPartC.Unit5
         /// in the array with every animation timer click.  
         /// Cycle continuously.
         /// 
-        /// FIND THE DELIBERATE ERROR!!!
+        /// 
         /// </summary>
         private void UpdateImage(object sender, EventArgs e)
         {
-            if (imageNo >= MAXN_IMAGES)
+            if (imageNo >= MAXN_IMAGES - 1)
                 imageNo = 0;
             else
                 imageNo++;
@@ -85,5 +100,10 @@ namespace WindowsFormsPartC.Unit5
             animationTimer.Stop();
         }
 
+        private void updateDateTimer(object sender, EventArgs e)
+        {
+            dateLabel.Text = DateTime.Now.ToLongDateString();
+            timeLabel.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }

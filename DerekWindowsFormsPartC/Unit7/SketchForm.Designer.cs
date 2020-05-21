@@ -50,7 +50,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SketchForm";
-            this.Text = "Derek\'s Sketch Form";
+            this.Text = "Daniel\'s sketch Form";
             this.Load += new System.EventHandler(this.SketchForm_Load);
             this.ResumeLayout(false);
 
