@@ -4,6 +4,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsPartC.Unit7
 {
+    /// <summary>
+    /// This sketch form allows the user to create
+    /// red lines on the screen.
+    /// </summary>
     public partial class SketchForm : Form
     {
         private Bitmap canvas;
@@ -47,9 +51,6 @@ namespace WindowsFormsPartC.Unit7
             else if (keyName == "Down")
             {
                 y = y + penSize / 2;
-            }
-            else if (keyName == "C")
-            {
             }
             else if (keyName == "Escape")
             {

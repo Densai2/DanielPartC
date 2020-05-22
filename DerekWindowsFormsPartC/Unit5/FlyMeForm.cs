@@ -83,35 +83,6 @@ namespace WindowsFormsPartC.Unit5
 
 
         }
-
-        private void updatePigs(object sender, EventArgs e)
-        {
-            pigPictureBox.Image = animation.GetNextImage();
-
-            pigPictureBox.Left += horizontalSpeed;
-
-            // If the pig goes off the right hand side
-
-            if (pigPictureBox.Left > this.Width)
-            {
-                pigPictureBox.Top += VERTICAL_SPEED;
-                pigPictureBox.Left = -pigPictureBox.Width;
-
-                //Image image = Image.FromFile("../../Images/Town and Sky/City1.wmf");
-
-                if (background == BACKGROUND_IMAGE_1)
-                {
-                    background = BACKGROUND_IMAGE_2;
-                }
-                else
-                {
-                    background = BACKGROUND_IMAGE_1;
-                }
-
-                Bitmap bitmap = new Bitmap(background);
-                BackgroundImage = bitmap;
-            }
-        }
         private void changeSpeed(object sender, EventArgs e)
         {
             int speed = (int)speedNumericUpDown.Value;

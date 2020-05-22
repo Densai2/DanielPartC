@@ -1,7 +1,9 @@
-﻿using System;
+﻿using DerekWindowsFormsPartC;
+using System;
 using System.Windows.Forms;
 using WindowsFormsPartC.Unit5;
 using WindowsFormsPartC.Unit6;
+using WindowsFormsPartC.Unit7;
 
 namespace WindowsFormsPartC
 {
@@ -38,6 +40,17 @@ namespace WindowsFormsPartC
                 // Tasks 6.1 to 6.6
                 GraphicsForm form = new GraphicsForm();
                 form.Show();
+
+            }
+            else if (bouncingBallRadio.Checked)
+            {
+                Bouncing_ball bouncing_Ball = new Bouncing_ball();
+                bouncing_Ball.Show();
+            }
+            else if (unit7RadioButton.Checked)
+            {
+                SketchForm sketchForm = new SketchForm();
+                sketchForm.Show();
             }
         }
 

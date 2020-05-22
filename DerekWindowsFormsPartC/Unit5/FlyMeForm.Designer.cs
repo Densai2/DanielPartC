@@ -37,12 +37,10 @@
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.speedNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.pigPictureBox = new System.Windows.Forms.PictureBox();
             this.animationTimer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.copterPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speedNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pigPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,15 +132,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Speed";
             // 
-            // pigPictureBox
-            // 
-            this.pigPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.pigPictureBox.Location = new System.Drawing.Point(52, 59);
-            this.pigPictureBox.Name = "pigPictureBox";
-            this.pigPictureBox.Size = new System.Drawing.Size(100, 105);
-            this.pigPictureBox.TabIndex = 5;
-            this.pigPictureBox.TabStop = false;
-            // 
             // animationTimer2
             // 
             this.animationTimer2.Enabled = true;
@@ -154,7 +143,6 @@
             this.BackgroundImage = global::DerekWindowsFormsPartC.Properties.Resources.City1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(836, 546);
-            this.Controls.Add(this.pigPictureBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.speedNumericUpDown);
             this.Controls.Add(this.quitButton);
@@ -170,7 +158,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.copterPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speedNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pigPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,7 +173,6 @@
         private System.Windows.Forms.Timer animationTimer;
         private System.Windows.Forms.NumericUpDown speedNumericUpDown;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pigPictureBox;
         private System.Windows.Forms.Timer animationTimer2;
     }
 }

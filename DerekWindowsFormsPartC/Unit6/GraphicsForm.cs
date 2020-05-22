@@ -17,9 +17,9 @@ namespace WindowsFormsPartC.Unit6
     }
 
     /// <summary>
-    /// This form demonstrates the drawing of simple geometric shapes
+    /// This form shows  drawings of simple shapes
     /// including rectangles, ellipses, polygons and lines.
-    /// 
+    ///
     /// Unit 6: Tasks 6.1 to 6.5
     /// Daniel Grace
     /// </summary>

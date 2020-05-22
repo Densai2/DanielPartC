@@ -84,7 +84,8 @@ namespace WindowsFormsPartC.Unit6
         }
 
         /// <summary>
-        /// 
+        /// Uses the assigned position to create a circle
+        /// on the screen, the colour can also change.
         /// </summary>
         private void drawCircles(Graphics g)
         {
@@ -111,7 +112,8 @@ namespace WindowsFormsPartC.Unit6
         }
 
         /// <summary>
-        /// 
+        /// A hexagon is drawn and is placed on the screen
+        /// in a green colour with a random outline
         /// </summary>
         private void drawHexagon(Graphics graphics, int x, int y)
         {
@@ -135,7 +137,8 @@ namespace WindowsFormsPartC.Unit6
         }
 
         /// <summary>
-        /// 
+        /// This creates the rectangle on the side showing
+        /// a hole in the middle for the yellow circle.
         /// </summary>
         private void drawRectangles(Graphics g, int x, int y)
         {
@@ -162,12 +165,13 @@ namespace WindowsFormsPartC.Unit6
 
 
         /// <summary>
-        /// 
+        /// Displays text on the screen above the
+        /// hexagon.
         /// </summary>
         private void drawStrings(Graphics g)
         {
             int fontSize = 30;
-            x = 50; y = 20;
+            x = 50; y = -30;
 
             Font myFont = new Font("Courier", fontSize);
             BackColor = Color.Yellow;
