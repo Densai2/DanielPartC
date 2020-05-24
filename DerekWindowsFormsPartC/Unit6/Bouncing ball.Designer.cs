@@ -33,10 +33,10 @@
             this.stopButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AreaPictureBox = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AreaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // startButton
@@ -71,21 +71,21 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.AreaPictureBox);
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(937, 424);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox1
+            // AreaPictureBox
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(933, 425);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.AreaPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AreaPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.AreaPictureBox.Name = "AreaPictureBox";
+            this.AreaPictureBox.Size = new System.Drawing.Size(933, 425);
+            this.AreaPictureBox.TabIndex = 0;
+            this.AreaPictureBox.TabStop = false;
+            this.AreaPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // timer1
             // 
@@ -103,7 +103,7 @@
             this.Name = "Bouncing_ball";
             this.Text = "Bouncing_ball";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AreaPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,7 +114,7 @@
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox AreaPictureBox;
         private System.Windows.Forms.Timer timer1;
     }
 }

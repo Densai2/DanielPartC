@@ -41,7 +41,7 @@ namespace DerekWindowsFormsPartC
             {
                 xmove = -xmove;
             }
-            else if (x + 30 > ClientSize.Width)
+            else if (x + 5 > AreaPictureBox.Width)
             {
                 xmove = -xmove;
             }
@@ -50,7 +50,7 @@ namespace DerekWindowsFormsPartC
             {
                 ymove = -ymove;
             }
-            else if (y + 30 > ClientSize.Height)
+            else if (y + 5 > AreaPictureBox.Height)
             {
                 ymove = -ymove;
             }
@@ -80,8 +80,7 @@ namespace DerekWindowsFormsPartC
         }
 
         /// <summary>
-        /// Depending on the button pressed the ball can change size
-        /// and the background changes colour.
+        /// Depending on the button pressed the ball can change size.
         /// </summary>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -97,13 +96,6 @@ namespace DerekWindowsFormsPartC
             if (input == "Down")
             {
                 size = size - 10;
-                return true;
-            }
-            if (input == "C")
-            {
-                Random rand = new Random();
-                Color randomColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
-                pictureBox1.BackColor = randomColor;
                 return true;
             }
             // return true if key processed, otherwise false

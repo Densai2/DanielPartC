@@ -34,11 +34,9 @@
             this.animationRadioButton = new System.Windows.Forms.RadioButton();
             this.flyMeRadioButton = new System.Windows.Forms.RadioButton();
             this.quitButton = new System.Windows.Forms.Button();
-            this.graphicsRadioButton = new System.Windows.Forms.RadioButton();
             this.unit6RadioButton = new System.Windows.Forms.RadioButton();
             this.unit7RadioButton = new System.Windows.Forms.RadioButton();
             this.bouncingBallRadio = new System.Windows.Forms.RadioButton();
-            this.additionalLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -93,16 +91,6 @@
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.quitForm);
             // 
-            // graphicsRadioButton
-            // 
-            this.graphicsRadioButton.AutoSize = true;
-            this.graphicsRadioButton.Location = new System.Drawing.Point(48, 448);
-            this.graphicsRadioButton.Name = "graphicsRadioButton";
-            this.graphicsRadioButton.Size = new System.Drawing.Size(180, 30);
-            this.graphicsRadioButton.TabIndex = 5;
-            this.graphicsRadioButton.Text = "Unit 6 Graphics";
-            this.graphicsRadioButton.UseVisualStyleBackColor = true;
-            // 
             // unit6RadioButton
             // 
             this.unit6RadioButton.AutoSize = true;
@@ -121,6 +109,7 @@
             this.unit7RadioButton.Name = "unit7RadioButton";
             this.unit7RadioButton.Size = new System.Drawing.Size(166, 30);
             this.unit7RadioButton.TabIndex = 7;
+            this.unit7RadioButton.TabStop = true;
             this.unit7RadioButton.Text = "Unit 7 Sketch ";
             this.unit7RadioButton.UseVisualStyleBackColor = true;
             // 
@@ -133,15 +122,6 @@
             this.bouncingBallRadio.TabIndex = 8;
             this.bouncingBallRadio.Text = "Unit 6: Bouncing ball";
             this.bouncingBallRadio.UseVisualStyleBackColor = true;
-            // 
-            // additionalLabel
-            // 
-            this.additionalLabel.AutoSize = true;
-            this.additionalLabel.Location = new System.Drawing.Point(43, 389);
-            this.additionalLabel.Name = "additionalLabel";
-            this.additionalLabel.Size = new System.Drawing.Size(195, 26);
-            this.additionalLabel.TabIndex = 9;
-            this.additionalLabel.Text = "Additional program";
             // 
             // label1
             // 
@@ -158,11 +138,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 679);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.additionalLabel);
             this.Controls.Add(this.bouncingBallRadio);
             this.Controls.Add(this.unit7RadioButton);
             this.Controls.Add(this.unit6RadioButton);
-            this.Controls.Add(this.graphicsRadioButton);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.flyMeRadioButton);
             this.Controls.Add(this.animationRadioButton);
@@ -185,11 +163,9 @@
         private System.Windows.Forms.RadioButton animationRadioButton;
         private System.Windows.Forms.RadioButton flyMeRadioButton;
         private System.Windows.Forms.Button quitButton;
-        private System.Windows.Forms.RadioButton graphicsRadioButton;
         private System.Windows.Forms.RadioButton unit6RadioButton;
         private System.Windows.Forms.RadioButton unit7RadioButton;
         private System.Windows.Forms.RadioButton bouncingBallRadio;
-        private System.Windows.Forms.Label additionalLabel;
         private System.Windows.Forms.Label label1;
     }
 }

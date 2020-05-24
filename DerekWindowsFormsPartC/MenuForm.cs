@@ -29,12 +29,6 @@ namespace WindowsFormsPartC
                 FlyMeForm form = new FlyMeForm();
                 form.Show();
             }
-            else if (graphicsRadioButton.Checked)
-            {
-                // Tasks 6.1 to 6.6
-                GraphicsForm2 form = new GraphicsForm2();
-                form.Show();
-            }
             else if (unit6RadioButton.Checked)
             {
                 // Tasks 6.1 to 6.6

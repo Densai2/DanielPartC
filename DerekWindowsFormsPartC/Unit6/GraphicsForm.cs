@@ -149,7 +149,7 @@ namespace WindowsFormsPartC.Unit6
                 g.Clear(BackColor);
                 g.DrawString("Daniel's Graphics Drawing", myFont, Brushes.Red, x, y);
 
-                System.Threading.Thread.Sleep(500);
+                System.Threading.Thread.Sleep(200);
                 y = y + fontSize;
                 g.Clear(BackColor);
             }
