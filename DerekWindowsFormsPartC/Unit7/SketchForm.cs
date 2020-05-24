@@ -33,7 +33,11 @@ namespace WindowsFormsPartC.Unit7
             g.FillEllipse(Brushes.Red, x, y, penSize, penSize);
             sketchPanel.BackgroundImage = canvas;
         }
-
+        
+        /// <summary>
+        /// Depending on input, the line can move over the screen/
+        /// When escape is click a box is shown and C resets the form.
+        /// </summary>
         private void drawPoint(Graphics g)
         {
             if (keyName == "Right")
@@ -59,13 +63,12 @@ namespace WindowsFormsPartC.Unit7
                 {
                     Application.Exit();
                 }
-
             }
-            else if(keyName == "F1")
+            else if (keyName == "C")
             {
-                Random rnd = new Random();
-                Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
-                
+                SketchForm sketchForm = new SketchForm();
+                sketchForm.Show();
+                this.Dispose(false);
             }
 
             if (keyPressed)

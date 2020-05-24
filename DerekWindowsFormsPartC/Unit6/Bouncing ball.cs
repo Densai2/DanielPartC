@@ -78,6 +78,11 @@ namespace DerekWindowsFormsPartC
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Depending on the button pressed the ball can change size
+        /// and the background changes colour.
+        /// </summary>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             string input;

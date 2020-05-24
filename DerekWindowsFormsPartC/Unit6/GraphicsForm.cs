@@ -65,7 +65,9 @@ namespace WindowsFormsPartC.Unit6
                 drawCircles(e.Graphics);
             }
         }
-
+        /// <summary>
+        /// This draws a circle at the co-ordinates in a random colour.
+        /// </summary>
         private void drawCircles(Graphics g)
         {
             x = 400; y = 100;
@@ -152,7 +154,10 @@ namespace WindowsFormsPartC.Unit6
                 g.Clear(BackColor);
             }
         }
-
+        /// <summary>
+        /// This handles drawing a rectangle at the co-ordinates
+        /// in the colour blue.
+        /// </summary>
         private void drawRectangles(Graphics g, int x, int y)
         {
             w = 300; h = 200; int size = 20;
@@ -177,7 +182,9 @@ namespace WindowsFormsPartC.Unit6
         }
 
         /// <summary>
-        /// Task 6.3
+        /// Task 6.3, decides the start point of hexagon and 
+        /// goes around the points making the hexagon in yellow.
+        /// A string is displayed underneathe 
         /// </summary>
         private void drawHexagon(Graphics g)
         {

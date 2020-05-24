@@ -51,21 +51,23 @@ namespace WindowsFormsPartC.Unit5
                 animationTimer.Enabled = true;
             }
         }
-
+        /// <summary>
+        /// Updates image for animation, detects when the left of the helicopter
+        /// is touching the edge of the screen and then chances to a new background.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void updateCopter(object sender, EventArgs e)
         {
             copterPictureBox.Image = animation.GetNextImage();
 
             copterPictureBox.Left += horizontalSpeed;
 
-            // If the copter goes off the right hand side
 
             if (copterPictureBox.Left > this.Width)
             {
                 copterPictureBox.Top += VERTICAL_SPEED;
                 copterPictureBox.Left = -copterPictureBox.Width;
-
-                //Image image = Image.FromFile("../../Images/Town and Sky/City1.wmf");
 
                 if (background == BACKGROUND_IMAGE_1)
                 {
@@ -83,6 +85,12 @@ namespace WindowsFormsPartC.Unit5
 
 
         }
+        /// <summary>
+        /// Depending on the speed chosen, the animation
+        /// timer will be increased or decreased.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void changeSpeed(object sender, EventArgs e)
         {
             int speed = (int)speedNumericUpDown.Value;
