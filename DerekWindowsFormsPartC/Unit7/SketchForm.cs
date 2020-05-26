@@ -30,10 +30,11 @@ namespace WindowsFormsPartC.Unit7
         {
             canvas = new Bitmap(sketchPanel.Width, sketchPanel.Height);
             Graphics g = Graphics.FromImage(canvas);
-            g.FillEllipse(Brushes.Red, x, y, penSize, penSize);
+            g.FillEllipse(solidBrush, x, y, penSize, penSize);
             sketchPanel.BackgroundImage = canvas;
         }
-        
+        SolidBrush solidBrush = new SolidBrush(Color.Red);
+
         /// <summary>
         /// Depending on input, the line can move over the screen/
         /// When escape is click a box is shown and C resets the form.
@@ -56,6 +57,26 @@ namespace WindowsFormsPartC.Unit7
             {
                 y = y + penSize / 2;
             }
+            else if (keyName == "G")
+            {
+                y = y + penSize / 2;
+                x = x + penSize / 2;
+            }
+            else if (keyName == "T")
+            {
+                y = y - penSize / 2;
+                x = x + penSize / 2;
+            }
+            else if (keyName == "H" )
+            {
+                y = y - penSize / 2;
+                x = x - penSize / 2;
+            }
+            else if (keyName == "F")
+            {
+                y = y + penSize / 2;
+                x = x - penSize / 2;
+            }
             else if (keyName == "Escape")
             {
                 response = MessageBox.Show("Do you want to quit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -70,9 +91,23 @@ namespace WindowsFormsPartC.Unit7
                 sketchForm.Show();
                 this.Dispose(false);
             }
+            else if (keyName == "S")
+            {
+                penSize = penSize - 1;
+            }
+            else if (keyName == "B")
+            {
+                penSize = penSize + 1;
+            }
+            else if (keyName == "F1")
+            {
+                Random rnd = new Random();
+                Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                this.BackColor = randomColor;
+            }
 
             if (keyPressed)
-                g.FillEllipse(Brushes.Red, x, y, penSize, penSize);
+                g.FillEllipse(solidBrush, x, y, penSize, penSize);
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

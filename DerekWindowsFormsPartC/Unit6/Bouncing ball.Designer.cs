@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.startButton = new System.Windows.Forms.Button();
-            this.stopButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AreaPictureBox = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Stop = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AreaPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -47,17 +47,7 @@
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
-            this.startButton.Click += new System.EventHandler(this.startButton_Click);
-            // 
-            // stopButton
-            // 
-            this.stopButton.Location = new System.Drawing.Point(563, 513);
-            this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(75, 23);
-            this.stopButton.TabIndex = 1;
-            this.stopButton.Text = "Stop";
-            this.stopButton.UseVisualStyleBackColor = true;
-            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            this.startButton.Click += new System.EventHandler(this.StartButton);
             // 
             // quitButton
             // 
@@ -67,7 +57,7 @@
             this.quitButton.TabIndex = 2;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
-            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            this.quitButton.Click += new System.EventHandler(this.exitButton);
             // 
             // panel1
             // 
@@ -85,20 +75,30 @@
             this.AreaPictureBox.Size = new System.Drawing.Size(933, 425);
             this.AreaPictureBox.TabIndex = 0;
             this.AreaPictureBox.TabStop = false;
-            this.AreaPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.AreaPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.redBall);
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.timerMove);
+            // 
+            // Stop
+            // 
+            this.Stop.Location = new System.Drawing.Point(546, 513);
+            this.Stop.Name = "Stop";
+            this.Stop.Size = new System.Drawing.Size(75, 23);
+            this.Stop.TabIndex = 4;
+            this.Stop.Text = "Stop";
+            this.Stop.UseVisualStyleBackColor = true;
+            this.Stop.Click += new System.EventHandler(this.stopButton);
             // 
             // Bouncing_ball
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 563);
+            this.Controls.Add(this.Stop);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.quitButton);
-            this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
             this.Name = "Bouncing_ball";
             this.Text = "Bouncing_ball";
@@ -111,10 +111,10 @@
         #endregion
 
         private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox AreaPictureBox;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button Stop;
     }
 }

@@ -20,14 +20,15 @@ namespace WindowsFormsPartC.Unit5
 
         public const string BACKGROUND_IMAGE_1 = "../../Images/Town and Sky/City1.wmf";
         public const string BACKGROUND_IMAGE_2 = "../../Images/Town and Sky/City2.wmf";
+        public const string BACKGROUND_IMAGE_3 = "../../Images/Town and Sky/City3.wmf";
 
         private string background = BACKGROUND_IMAGE_2;
+        private string background1 = BACKGROUND_IMAGE_3;
 
         private int horizontalSpeed = 10;
+        string baseFileName;
 
         private Animation animation = new Animation(4);
-
-        private Animation animation2 = new Animation(4);
 
         public FlyMeForm()
         {
@@ -57,7 +58,7 @@ namespace WindowsFormsPartC.Unit5
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void updateCopter(object sender, EventArgs e)
+        private void updateImages(object sender, EventArgs e)
         {
             copterPictureBox.Image = animation.GetNextImage();
 
@@ -75,16 +76,47 @@ namespace WindowsFormsPartC.Unit5
                 }
                 else
                 {
-                    background = BACKGROUND_IMAGE_1;
+                    background = BACKGROUND_IMAGE_3;
                 }
 
                 Bitmap bitmap = new Bitmap(background);
                 BackgroundImage = bitmap;
             }
+            if (pigPictureBox.Left > this.Width)
+            {
+                pigPictureBox.Top += VERTICAL_SPEED;
+                pigPictureBox.Left = -pigPictureBox.Width;
 
+                if (background1 == BACKGROUND_IMAGE_3)
+                {
+                    background = BACKGROUND_IMAGE_2;
+                }
+                else
+                {
+                    background1 = BACKGROUND_IMAGE_3;
+                }
+                Bitmap bitmap = new Bitmap(background1);
+                BackgroundImage = bitmap;
+            }
+            if (copterPictureBox.Top > this.Height - copterPictureBox.Height)
+            {
+                copterPictureBox.Top = VERTICAL_SPEED;
+            }
 
-
+            if (pigPictureBox.Top > this.Height - pigPictureBox.Height)
+            {
+                pigPictureBox.Top = VERTICAL_SPEED;
+            }
         }
+        private void loadImages(object sender, EventArgs e)
+        {
+            ///baseFileName = "../../Images/Copter/copter";
+            ///animation.LoadImages(baseFileName);
+
+            baseFileName = "../../Images/Pigs/pig";
+            animation.LoadImages(baseFileName);
+        }
+
         /// <summary>
         /// Depending on the speed chosen, the animation
         /// timer will be increased or decreased.
@@ -106,18 +138,5 @@ namespace WindowsFormsPartC.Unit5
                 default: animationTimer.Interval = 80; break;
             }
         }
-
-        private void loadImages(object sender, EventArgs e)
-        {
-            string baseFileName = "../../Images/Copter/copter";
-            animation.LoadImages(baseFileName);
-        }
-
-        private void loadImages2(object sender, EventArgs e)
-        {
-            string baseFileName = "../../Images/Pigs/Pig";
-            animation.LoadImages(baseFileName);
-        }
-
     }
 } 

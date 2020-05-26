@@ -23,7 +23,7 @@ namespace DerekWindowsFormsPartC
         // amount of movement for each tick
         int xmove = 10, ymove = 10;
 
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        private void redBall(object sender, PaintEventArgs e)
         {
             // get a graphics object
             Graphics g = e.Graphics;      
@@ -33,7 +33,7 @@ namespace DerekWindowsFormsPartC
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timerMove(object sender, EventArgs e)
         {
             // add 10 to x and y positions
             x += xmove;             
@@ -57,22 +57,21 @@ namespace DerekWindowsFormsPartC
             Refresh();
         }
 
-        private void startButton_Click(object sender, EventArgs e)
+        private void StartButton(object sender, EventArgs e)
         {
             timer1.Enabled = true;
         }
-
-        private void stopButton_Click(object sender, EventArgs e)
-        {
-            timer1.Enabled = false;
-        }
-
-        private void quitButton_Click(object sender, EventArgs e)
+        private void exitButton(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         int size = 30;
+
+        private void stopButton(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+        }
 
         public Bouncing_ball()
         {
