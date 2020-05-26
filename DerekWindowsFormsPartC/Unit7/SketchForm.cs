@@ -57,22 +57,22 @@ namespace WindowsFormsPartC.Unit7
             {
                 y = y + penSize / 2;
             }
-            else if (keyName == "G")
+            else if (keyName == "Up" && keyName == "Left")
             {
                 y = y + penSize / 2;
                 x = x + penSize / 2;
             }
-            else if (keyName == "T")
+            else if (keyName == "Up" && keyName == "Right")
             {
                 y = y - penSize / 2;
                 x = x + penSize / 2;
             }
-            else if (keyName == "H" )
+            else if (keyName == "Down" && keyName == "Right" )
             {
                 y = y - penSize / 2;
                 x = x - penSize / 2;
             }
-            else if (keyName == "F")
+            else if (keyName == "Down" && keyName == "Left")
             {
                 y = y + penSize / 2;
                 x = x - penSize / 2;
@@ -85,7 +85,7 @@ namespace WindowsFormsPartC.Unit7
                     Application.Exit();
                 }
             }
-            else if (keyName == "C")
+            else if (keyName == "")
             {
                 SketchForm sketchForm = new SketchForm();
                 sketchForm.Show();
